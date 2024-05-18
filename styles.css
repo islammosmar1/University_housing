@@ -387,17 +387,35 @@ h1:hover,h1:active {
 
 
 }
-p{
+.typewriter {
+    font-family: monospace;
+    overflow: hidden; 
+    border-right: .15em solid orange; 
+    white-space: nowrap; 
+    margin: 0 auto; 
+    letter-spacing: .15em; 
+    width: fit-content;
     font-size: 20px;;
-}
 
-
-p:hover, p:active {
+    
+  }
+  
+.typewriter :hover,:active{
     color: #fff7f7;
     cursor: pointer;
     transition: all 0.7s ease;
-
 }
+
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
+
 
 @keyframes backgroundMove {
     0% { background-position: 0% 50%; }
