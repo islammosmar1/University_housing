@@ -122,6 +122,41 @@ setInterval(createShootingStar, 2000);
 
 
 
+const text = "Welcome to our website, click the button to enter!";
+const typingSpeed = 120;
+const erasingSpeed = 60;
+const textElement = document.getElementById('text');
+let textIndex = 0;
+let isErasing = false;
+
+function type() {
+  if (!isErasing) {
+    textElement.textContent += text.charAt(textIndex++);
+    if (textIndex == text.length) {
+      setTimeout(() => { isErasing = true; }, 2000);
+    }
+  } else {
+    textElement.textContent = text.substring(0, textIndex--);
+    if (textIndex == 0) {
+      isErasing = false;
+      setTimeout(() => { type(); }, 2000);
+      return;
+    }
+  }
+  setTimeout(type, isErasing ? erasingSpeed : typingSpeed);
+}
+
+document.addEventListener("DOMContentLoaded", function() { // Make sure DOM is fully loaded
+  setTimeout(type, 1000);
+});
+
+
+
+
+
+
+
+
 
 
 
