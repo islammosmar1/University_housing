@@ -1,0 +1,607 @@
+
+
+
+
+
+.lamp-container {
+    position: absolute;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+ 
+    body, html {
+        height: 100%;
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+         overflow: hidden; 
+
+         animation: backgroundMove 30s linear infinite;
+         background: linear-gradient(120deg, #403b44, #4c3458, #5d2781, #302f2d);
+         background-size: 400% 400%;
+    } 
+    
+    .welcome-screen {
+        margin-top: 4%;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: rgba(170, 143, 143, 0.74);
+        text-align: center;
+        /* animation: backgroundMove 30s linear infinite;
+        background: linear-gradient(120deg, #9312e9, #c471ed, #f64f59, #12c2e9);
+        background-size: 400% 400%; */
+        
+    }
+
+
+
+    h1:hover,active{
+        color:#ffffff;
+        cursor: pointer;
+      
+
+
+    }
+    p:hover,active{
+        color:#ffffff;
+        cursor: pointer;
+
+
+
+    }
+    
+    @keyframes backgroundMove {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+    
+    .cord {
+        width: 2px;
+        background-color: #ccc;
+        position: relative;
+
+    }
+
+
+    
+    
+    .marquee {
+        position: relative;
+        width: 100vw;
+        top: 0;
+        background-color: rgba(95, 18, 18, 0.007);
+        color: white;
+        font-size: 20px;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    
+    .marquee p {
+        position: relative;
+
+        display: inline-block;
+        padding-left: 100%;
+        animation: marquee 20s linear infinite;
+    }
+    
+    @keyframes marquee {
+        from { transform: translateX(0); }
+        to { transform: translateX(-100%); }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* styles.css */
+body {
+    
+
+
+
+.lamp-container {
+    position: absolute;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+    
+    .lamp {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    .bulb {
+        position: absolute;
+
+    width: 30px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    
+    button {
+        padding: 15px 30px;
+        font-size: 20px;
+        cursor: pointer;
+        background-color: #ffffff;
+        color: #0056b3;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        transition: all 0.3s ease;
+    }
+    
+    button:hover {
+        background-color: #004085;
+        color: #ffffff;
+        transform: translateY(-2px);
+        background: linear-gradient(120deg, #966db1, #613379, #7c2759, #6a1e74);
+
+        
+    }
+    
+    button:active {
+        transform: translateY(1px);
+    }
+
+    body, html {
+        height: 100%;
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+        overflow: hidden; /* يمنع الإطار التمريري */
+        animation: backgroundMove 30s linear infinite;
+        background: linear-gradient(120deg, #9312e9, #c471ed, #f64f59, #12c2e9);
+        background-size: 400% 400%;
+    }
+    
+ 
+    
+    @keyframes backgroundMove {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+    
+    .cord {
+        width: 2px;
+        background-color: #ccc;
+        position: relative;
+
+    }
+
+    
+    
+    .marquee {
+        position: fixed;
+
+        width: 100%;
+        top: 0;
+        background-color: rgba(85, 83, 83, 0.5);
+        color: white;
+        font-size: 20px;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    
+    .marquee p {
+        position: relative;
+
+        display: inline-block;
+        padding-left: 100%;
+        animation: marquee 20s linear infinite;
+    }
+    
+    @keyframes marquee {
+        from { transform: translateX(0); }
+        to { transform: translateX(-100%); }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* styles.css */
+body {
+
+    background-color: #dadada00;
+    display: flex;
+    position: absolute;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    /* animation: backgroundMove 30s linear infinite;
+    background: linear-gradient(120deg, #9312e9, #c471ed, #f64f59, #12c2e9);
+    background-size: 400% 400%; */
+
+}
+
+    /* display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; */
+}
+.light {
+    position: relative;
+    fill: white;
+    animation: blink 1s infinite;
+    filter: url(#glow); /* تطبيق الفلتر على جميع الأضواء */
+}
+.light.yellow {
+    fill: #ffd700;
+}
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    60% { opacity: 0; }
+}
+.light:nth-child(odd) {
+    animation-delay: 1s;
+}
+.rope {
+    stroke-width: 1.5;
+}
+
+
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    animation: backgroundMove 30s linear infinite;
+    background: linear-gradient(120deg,#130827, #320b58, #140427, #130827, #321e63);
+    background-size: 400% 400%;
+    position: relative;
+}
+
+/* الشهب والنجوم */
+.star {
+    position: absolute;
+    width: 1.5px;
+    height: 1.5px;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 3s infinite ease-in-out;
+}
+@keyframes twinkle {
+    0%, 100% { opacity: 0.08;    box-shadow: 0 0 1px white, 0 0 2px white, 0 0 3px white, 0 0 7px white;
+    }
+    50% { opacity: 1; }
+
+}
+.shooting-star {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: white;
+    box-shadow: 0 0 10px white, 0 0 20px white, 0 0 300px white;
+    opacity: 1;
+    animation: shoot 2.5s ease-in-out infinite;
+}
+@keyframes shoot {
+    0% {
+        transform: translateY(0) translateX(0) rotate(45deg);
+        opacity: 1;
+        box-shadow: 0 0 3px white, 0 0 4px white, 0 0 6px white, 0 0 8px white;
+    }
+    70% {
+        opacity: 1;
+        box-shadow: 0 0 15px white, 0 0 30px white, 0 0 45px white, 0 0 60px white;
+    }
+    100% {
+        transform: translateY(100vh) translateX(100vw) rotate(45deg);
+        opacity: 0;
+        box-shadow: 0 0 0 white, 0 0 0 white, 0 0 0 white, 0 0 0 white;
+    }
+}
+
+.welcome-screen {
+    margin-top: 4%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgba(170, 143, 143, 0.74);
+    text-align: center;
+}
+
+
+
+
+
+
+
+h1{
+    color: #ffffff;
+    font-size: 63px;
+
+}
+
+h1:hover,h1:active {
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.6s ease;
+     /* font-size: 54px;     */
+
+
+}
+p{
+    font-size: 20px;;
+}
+
+
+p:hover, p:active {
+    color: #fff7f7;
+    cursor: pointer;
+    transition: all 0.7s ease;
+
+}
+
+@keyframes backgroundMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.cord {
+    width: 2px;
+    background-color: #ccc;
+    position: relative;
+}
+
+.marquee {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: rgba(85, 83, 83, 0.5);
+    color: white;
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+ font-style: normal;
+    font-family: cursive;
+}
+
+.marquee p {
+    position: relative;
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+}
+
+.lamp-container {
+    position: absolute;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lamp {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bulb {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+button {
+    margin-top: 30px;
+    padding: 15px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #0056b3;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(37, 37, 37, 0.397);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #004085;
+    color: #ffffff;
+    transform: translateY(-7px);
+    font-size: x-large;
+    background: linear-gradient(120deg,#966db1, #8b6e9b, #a8186c, #6a1e74);
+    transition: all 0.6s ease;
+
+}
+
+
+
+
+
+
+button:active {
+transform: translateY(1px);
+}
+
+.light {
+position: relative;
+fill: rgb(255, 255, 255);
+animation: blink 1s infinite;
+filter: url(#glow); /* تطبيق الفلتر على جميع الأضواء */
+}
+
+.light.yellow {
+fill: #d4b500;
+}
+
+@keyframes blink {
+0%, 100% { opacity: 1; }
+60% { opacity: 0; }
+}
+
+.light:nth-child(odd) {
+animation-delay: 1s;
+}
+
+.rope {
+stroke-width: 2;
+}
+
+
+
+body{
+    font-family: 'Cursive';
+    font-size: larger;
+    font-style: italic;
+}
+
+
+
+
+
+/* //////////////////////////////// */
+
+
+
+/* قاعدة لشاشات التي يقل عرضها عن 768 بكسل */
+@media (max-width: 768px) {
+    .lamp-container, .lamp, .bulb {
+        width: 30px;
+        height: 30px; /* تصغير الأحجام للتناسب مع الشاشات الصغيرة */
+    }
+
+    .bulb {
+        width: 20px;
+        height: 20px;
+    }
+
+    h1 {
+        font-size: 24px; /* تقليل حجم الخط للعنوان */
+    }
+
+    p {
+        font-size: 16px; /* تقليل حجم الخط للنصوص */
+    }
+
+    button {
+        padding: 10px 20px; /* تقليل حجم الأزرار */
+        font-size: 16px;
+    }
+
+    .marquee {
+        font-size: 16px; /* تقليل حجم الخط للشريط الإخباري */
+    }
+
+    .welcome-screen {
+        padding: 20px; /* إضافة تبطين لتحسين المظهر على الشاشات الصغيرة */
+    }
+}
+
+/* قاعدة لشاشات التي يقل عرضها عن 480 بكسل */
+@media (max-width: 480px) {
+    .lamp-container, .lamp, .bulb {
+        width: 20px;
+        height: 20px; /* تصغير الأحجام أكثر للشاشات الصغيرة جدًا */
+    }
+
+    .bulb {
+        width: 15px;
+        height: 15px;
+    }
+
+    h1 {
+        font-size: 20px; /* تقليل حجم الخط للعنوان أكثر */
+    }
+
+    p {
+        font-size: 14px; /* تقليل حجم الخط للنصوص أكثر */
+    }
+
+    button {
+        padding: 8px 16px; /* تقليل حجم الأزرار أكثر */
+        font-size: 14px;
+    }
+
+    .marquee {
+        font-size: 14px; /* تقليل حجم الخط للشريط الإخباري أكثر */
+    }
+
+    .welcome-screen {
+        padding: 10px; /* تقليل التبطين */
+    }
+}

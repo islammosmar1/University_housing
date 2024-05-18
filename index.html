@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Our Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="2ac82c06-6e97-4210-b8e2-c52edb7b0a03 (1).webp">
+
+</head>
+<body>
+    <div class="marquee">
+        <p>Welcome to our wonderful site - Enjoy your visit👍!!
+    </p>
+    </div>
+
+    <div class="welcome-screen">
+        <h1>Welcome!</h1>
+        <p>Welcome to our website, click the button to enter.</p>
+        <button onclick="enterSite()">Enter Site</button>
+    </div>
+
+    <div class="lamps">
+        <div class="lamp-container" style="top: 63px; left: 78%;">
+            <div class="cord" style="height: 100px;"></div>
+            <div class="lamp" onmouseover="illuminate(this)" onmouseout="dim(this)" onclick="toggleColor(this)">
+                <div class="bulb"></div>
+            </div>
+        </div>
+        <div class="lamp-container" style="top: 63px; left: 90%;">
+            <div class="cord" style="height: 350px;"></div>
+            <div class="lamp" onmouseover="illuminate(this)" onmouseout="dim(this)" onclick="toggleColor(this)">
+                <div class="bulb"></div>
+            </div>
+        </div>
+
+        <svg width="200" height="800" viewBox="0 0 200 800" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <filter id="glow" x="-150%" y="-150%" width="400%" height="400%">
+                    <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+                    <feMerge>
+                        <feMergeNode in="coloredBlur"/>
+                        <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                </filter>
+            </defs>
+            <path id="rope1" class="rope" d="M 50 0 Q 75 75 50 150 T 50 300 T 50 450 T 50 600" stroke="#9c9595ab" fill="none"/>
+            <circle class="light" cx="50" cy="10" r="7"/>
+            <circle class="light yellow" cx="50" cy="150" r="6"/>
+            <circle class="light" cx="50" cy="300" r="5"/>
+            <circle class="light yellow" cx="50" cy="450" r="7"/>
+            <circle class="light" cx="50" cy="600" r="6"/>
+        </svg>
+    </div>
+
+    <script src="scriptt.js"></script>
+</body>
+</html>

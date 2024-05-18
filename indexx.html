@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Housing Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="2ac82c06-6e97-4210-b8e2-c52edb7b0a03 (1).webp">
+
+</head>
+<body>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Welcome to the University Housing Management System</h2>
+            <p>Please choose one of the following options to proceed:</p>
+            <button onclick="showPage('login')">Log In</button>
+            <button onclick="showPage('register')">Sign in</button>
+            <button onclick="showPage('quiz')">Start Survey</button>
+        </div>
+    </div>
+
+        
+  
+
+    <div id="messageBox" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeMessageBox()">&times;</span>
+            <p id="thankYouMessage"></p>
+        </div>
+    </div>
+    <header>
+        <h1>University Housing Management System</h1>
+        <input type="text" id="search-bar" placeholder="Search here..." aria-label="Search">
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showPage('home')">Home</a></li>
+            <li><a href="#" onclick="showPage('quiz')">Start Search</a></li>
+            <li><a href="#" onclick="showPage('login')">Log In</a></li>
+            <li><a href="#" onclick="showPage('register')">Sign in</a></li>
+            <li><a href="#" onclick="showPage('responses')">Requsests and Offers</a></li>
+        </ul>
+    </nav>
+    <div id="home" class="content active">
+        <div class="slider">
+            <div class="slide active">Welcome to our system!</div>
+            <div class="slide">Explore housing options!</div>
+            <div class="slide">Start your university journey with us!</div>
+        </div>
+        <button onclick="showPage('quiz')">Start Survey</button>
+    </div>
+    <div id="quiz" class="content">
+        <h2>Find Your Housing</h2>
+        <form id="housingForm">
+            <input type="text" id="fullname" name="fullname" placeholder="Full Name"><br>
+            <input type="text" id="city" name="city" placeholder="City"><br>
+            <input type="text" id="services" name="services" placeholder="Required Services"><br>
+            <input type="number" id="rooms" name="rooms" placeholder="Number of Rooms"><br>
+            <input type="text" id="location" name="location" placeholder="Preferred Location"><br>
+            <input type="text" id="phone" name="phone" placeholder="Phone Number"><br>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    <div id="login" class="content">
+        <h2>Log In</h2>
+            <form>
+                <input type="text" id="username" name="username" placeholder="Username">
+                <input type="password" id="password" name="password" placeholder="Password">
+                <button type="submit">Log In</button>
+            </form>
+        </div>
+        <div id="register" class="content">
+            <h2>Create New Account</h2>
+            <form>
+                <input type="text" id="new_username" name="new_username" placeholder="New Username">
+                <input type="password" id="new_password" name="new_password" placeholder="New Password">
+                <input type="email" id="email" name="email" placeholder="Email">
+                <button type="submit">sign in</button>
+            </form>
+        </div>
+        <div id="responses" class="content">
+            <h2>Responses</h2>
+            <table id="responseTable">
+                <thead>
+                    <tr>
+                        <th>Full Name</th>
+                        <th>City</th>
+                        <th>Required Services</th>
+                        <th>Number of Rooms</th>
+                        <th>Preferred Location</th>
+                        <th>Phone Number</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data will be displayed here -->
+                </tbody>
+            </table>
+            <p id="noData" style="display: none;">No information available at the moment</p>
+            <button onclick="clearUserInformation()" style="margin-top: 20px;">Clear All Information</button>
+        </div>
+        
+        
+        <footer>
+            <p>&copy; 2024 University Housing Management System. All rights reserved. by Islam Mosmar.</p>
+           
+        </footer>
+        <div id="particles-js"></div>
+
+        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+        <script src="script.js"></script>
+    </body>
+    </html>
