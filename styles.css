@@ -306,7 +306,7 @@ body, html {
     font-family: 'Arial', sans-serif;
     overflow: hidden;
     animation: backgroundMove 30s linear infinite;
-    background: linear-gradient(120deg,#130827, #320b58, #140427, #130827, #321e63);
+    background: linear-gradient(120deg,#130827, #300c55, #140427, #0d0516, #311f5e);
     background-size: 400% 400%;
     position: relative;
 }
