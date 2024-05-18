@@ -1,20 +1,19 @@
 
 
 
-    // إضافة خريطة لتتبع حالة المصابيح
     const lamps = new Map();
 
     function setupLamps() {
         const lampElements = document.querySelectorAll('.lamp');
         lampElements.forEach(lamp => {
-            lamps.set(lamp, false); // بداية جميع المصابيح مطفأة
+            lamps.set(lamp, false); 
             lamp.onclick = () => toggleLamp(lamp);
         });
     }
     
     function toggleLamp(lamp) {
         const isOn = lamps.get(lamp);
-        lamps.set(lamp, !isOn); // تبديل الحالة
+        lamps.set(lamp, !isOn); 
         updateLampState(lamp);
     }
     
@@ -31,26 +30,25 @@
     }
     
     function illuminate(lamp) {
-        if (!lamps.get(lamp)) { // فقط إذا كان المصباح مطفأ
+        if (!lamps.get(lamp)) { 
             var bulb = lamp.querySelector('.bulb');
             bulb.style.boxShadow = '0 0 100px 50px white';
         }
     }
     
     function dim(lamp) {
-        if (!lamps.get(lamp)) { // فقط إذا كان المصباح مطفأ
+        if (!lamps.get(lamp)) { 
             var bulb = lamp.querySelector('.bulb');
             bulb.style.boxShadow = '0 0 0 rgba(255, 255, 255, 0)';
         }
     }
     
-    // تهيئة المصابيح عند تحميل الصفحة
     window.onload = setupLamps;
     
     
     
     function enterSite() {
-        window.location.href = 'indexx.html'; // ضع رابط الموقع الذي تريد الانتقال إليه
+        window.location.href = 'indexx.html';
     }
     
 
@@ -73,10 +71,8 @@
     
 
 // function enterSite() {
-//     // تنفيذ دخول الموقع
 // }
 
-// // تأثير إضاءة المصابيح
 // function illuminate(element) {
 //     element.querySelector('.bulb').style.backgroundColor = 'rgba(255, 255, 255, 1)';
 // }
@@ -94,7 +90,6 @@
 //     }
 // }
 
-// إنشاء النجوم
 const numStars = 100;
 for (let i = 0; i < numStars; i++) {
     let star = document.createElement('div');
@@ -105,7 +100,6 @@ for (let i = 0; i < numStars; i++) {
     document.body.appendChild(star);
 }
 
-// إنشاء الشهب
 function createShootingStar() {
     let shootingStar = document.createElement('div');
     shootingStar.className = 'shooting-star';
@@ -114,13 +108,11 @@ function createShootingStar() {
     shootingStar.style.animationDuration = '4s'; // تقليل سرعة الشهاب
     document.body.appendChild(shootingStar);
 
-    // إزالة الشهب بعد انتهاء الحركة
     setTimeout(() => {
         shootingStar.remove();
-    }, 7000); // نفس مدة الحركة
+    }, 7000); 
 }
 
-// إنشاء الشهب بشكل مستمر ولكن بعدد أقل
 setInterval(createShootingStar, 2000);
 
 
