@@ -574,7 +574,7 @@ body{
         font-size: 24px; /* تقليل حجم الخط للعنوان */
     }
 
-    p {
+    .typewriter {
         font-size: 16px; /* تقليل حجم الخط للنصوص */
     }
 
