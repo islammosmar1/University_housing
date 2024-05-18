@@ -1,9 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize the modal display
     const modal = document.getElementById('modal');
     modal.style.display = 'block';
 
-    // Event listeners for modal close actions
     const closeButtons = document.querySelectorAll('.close');
     closeButtons.forEach(button => {
         button.onclick = function() {
@@ -11,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
         };
     });
 
-    // Close modal on clicking outside
     window.onclick = function(event) {
         if (event.target.classList.contains('modal')) {
             event.target.style.display = 'none';
@@ -30,7 +27,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Slider for rotating through slides
     let currentSlide = 0;
     const slides = document.querySelectorAll('.slide');
     const totalSlides = slides.length;
@@ -134,12 +130,11 @@ function validateForm(form) {
 
 function clearTable() {
     const table = document.getElementById('responseTable').getElementsByTagName('tbody')[0];
-    table.innerHTML = '';  // يقوم بمسح جميع الصفوف في الجدول
+    table.innerHTML = ''; 
     document.getElementById('noData').style.display = 'block'; // يعرض رسالة "لا يوجد معلومات حتى اللحظة"
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    // هنا يتم إضافة جميع المستمعين للأحداث والوظائف الأخرى
 });
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -339,7 +334,7 @@ particlesJS("particles-js", {
                 "speed": 3
             },
             "repulse": {
-                "distance": 100, /* تقليل مدى التباعد عند لمس الماوس */
+                "distance": 100,
                 "duration": 0.4
             },
             "push": {
@@ -360,20 +355,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const modal = document.getElementById('modal');
     const closeButton = modal.querySelector('.close');
 
-    // فتح النافذة المنبثقة تلقائيًا عند تحميل الصفحة
     modal.style.display = 'block';
 
-    // إغلاق النافذة المنبثقة عند النقر على زر الإغلاق
     closeButton.onclick = function() {
         modal.style.display = 'none';
     };
 
-    // تخزين حالة عرض النافذة المنبثقة لتفادي إظهارها مرة أخرى بعد إعادة تحميل الصفحة
     if (sessionStorage.getItem('modalShown') !== 'true') {
         modal.style.display = 'block';
-        sessionStorage.setItem('modalShown', 'true'); // تحديد أن النافذة قد ظهرت
+        sessionStorage.setItem('modalShown', 'true'); 
     } else {
-        modal.style.display = 'none'; // إخفاء النافذة إذا كانت قد ظهرت بالفعل
+        modal.style.display = 'none';
     }
 });
 
@@ -383,9 +375,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function getCurrentUserId() {
-    // افتراض أن معرف المستخدم الحالي هو ثابت لغرض المثال
-    // في التطبيقات الفعلية، يجب عليك استخدام آلية تسجيل دخول المستخدم للحصول على هذا المعرف
-    return 'currentUserId'; // يجب تعديل هذا الجزء باستخدام آلية تسجيل الدخول الفعلية
+    return 'currentUserId'; 
 }
 
 document.getElementById('housingForm').addEventListener('submit', function(event) {
@@ -393,7 +383,7 @@ document.getElementById('housingForm').addEventListener('submit', function(event
 
     var currentUserId = getCurrentUserId();
     var formData = {
-        userId: currentUserId, // إضافة معرف المستخدم
+        userId: currentUserId, 
         fullname: document.getElementById('fullname').value,
         city: document.getElementById('city').value,
         services: document.getElementById('services').value,
@@ -423,19 +413,18 @@ function updateTable() {
 
 function displayDataInTable(data) {
     const table = document.getElementById('responseTable').getElementsByTagName('tbody')[0];
-    table.innerHTML = ''; // Clear existing rows
+    table.innerHTML = ''; 
 
     var currentUserId = getCurrentUserId();
     data.forEach((item, index) => {
         const newRow = table.insertRow();
         Object.values(item).forEach((text, i) => {
-            if (i !== 0) { // تخطي حقل userId
+            if (i !== 0) { 
                 let cell = newRow.insertCell();
                 cell.textContent = text;
             }
         });
 
-        // Add delete button only if the entry belongs to the current user
         if (item.userId === currentUserId) {
             const deleteButton = document.createElement('button');
             deleteButton.textContent = '✖';
@@ -458,7 +447,7 @@ function deleteEntry(index) {
     }
 
     var currentUserId = getCurrentUserId();
-    if (data[index].userId === currentUserId) { // تحقق من أن الإدخال يخص المستخدم الحالي
+    if (data[index].userId === currentUserId) { 
         data.splice(index, 1);
         localStorage.setItem('housingData', JSON.stringify(data));
         updateTable();
@@ -472,7 +461,7 @@ function clearUserInformation() {
     }
 
     var currentUserId = getCurrentUserId();
-    data = data.filter(item => item.userId !== currentUserId); // احتفاظ بالبيانات التي لا تخص المستخدم الحالي
+    data = data.filter(item => item.userId !== currentUserId); 
 
     localStorage.setItem('housingData', JSON.stringify(data));
     updateTable();
