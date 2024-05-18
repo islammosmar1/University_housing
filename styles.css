@@ -43,20 +43,22 @@
 
 
 
-    h1:hover,active{
-        color:#ffffff;
-        cursor: pointer;
-      
+.typewriter :hover,:active{
+    color: #fff7f7;
+    cursor: pointer;
+    transition: all 0.7s ease;
+}
 
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+  }
 
-    }
-    p:hover,active{
-        color:#ffffff;
-        cursor: pointer;
-
-
-
-    }
     
     @keyframes backgroundMove {
         0% { background-position: 0% 50%; }
